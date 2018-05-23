@@ -8,7 +8,7 @@ The following diagram illustrates the migration process\. When you request a mig
 
 To migrate from vCenter 6\.5, to specify the BYOL license type during migration, or to use incremental migration, use AWS Server Migration Service instead\. For more information, see the [AWS SMS User Guide](http://docs.aws.amazon.com/server-migration-service/latest/userguide/)\.
 
-
+**Topics**
 + [Prerequisites](#migrate-prerequisites)
 + [Limitations](#migrate-limitations)
 + [VM Import Authorization](#authorize-vmimport)
@@ -18,21 +18,14 @@ To migrate from vCenter 6\.5, to specify the BYOL license type during migration,
 + [Troubleshooting Migration](#troubleshooting-migration)
 
 ## Prerequisites<a name="migrate-prerequisites"></a>
-
 + An administrator must install and configure the connector\. The connector is part of AWS Management Portal for vCenter\. For more information, see [Setting Up AWS Management Portal for vCenter](setting-up.md)\.
-
 + An administrator must create at least one environment and grant you permission to migrate a virtual machine into one or more environments\. This environment is in addition to the default environment and must be explicitly created\. For more information, see [Managing Environments](administer-resources.md#manage-environments)\.
-
 + Ensure that your VM uses one of the supported operating systems and that you select one of the supported instance types\. For more information, see [VM Import/Export Prerequisites](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/VMImportPrerequisites.html) in the *Amazon EC2 User Guide*\.
-
 + Attach the `VMImportExportRoleForAWSConnector` policy to the **vmimport** role that you created per [VM Import Service Role](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/VMImportPrerequisites.html#vmimport-service-role) in the *Amazon EC2 User Guide*\.
-
 + Ensure that your VM does not have a disk whose compressed size is greater than 215 GB\.
 
 ## Limitations<a name="migrate-limitations"></a>
-
 + Review [VM Import/Export Requirements and Limitations](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/VMImportPrerequisites.html#vmimport-limitations) in the *Amazon EC2 User Guide*\.
-
 + Amazon EC2 limits the number of active migrations to 5 per region\. If the connector is already in the process of migrating 4 virtual machines, it queues any additional migration tasks until one of the active migration tasks completes successfully or is canceled\.
 
 ## VM Import Authorization<a name="authorize-vmimport"></a>
@@ -121,15 +114,11 @@ To export an EC2 instance that you previously migrated from a VM, use the manage
 If you have not previously exported an EC2 instance using vCenter, you must first specify the name that we will use for the S3 buckets that we create for instance export\. AWS creates one S3 bucket in each region for this purpose, with a name that follows the form `export-to-s3-`*name*`-`*region*\.
 
 **Requirements**
-
 + You must be an administrator of the management portal to export an EC2 instance\.
-
 + You can configure instance export using the AWS credentials of either an administrator or an IAM user\. To allow an IAM user to complete these steps, verify that the user has the permissions described in [Creating the Required Accounts and Users](install-option-connector.md#connector-accounts-fp)\.
 
 **Limits**
-
 + There is a limit of five concurrent export tasks per region\.
-
 + You can't export an instance that is currently being exported\.
 
 **To prepare for instance export**
@@ -237,9 +226,7 @@ If the hostname specified in the error message is not the fully\-qualified domai
 By default, the connector validates the certificates of all entities that it communicates with over HTTPS, including vCenter and ESXi servers\. This is essential to prevent man\-in\-the\-middle attacks\. However, if you are migrating a virtual machine from ESX version 4\.1 or earlier to Amazon EC2, the connector can't validate the certificates of the host, so the migration fails\.
 
 To work around this problem, you can do one of the following:
-
 + **Option 1**: Update to ESX 5\.0 or later\.
-
 + **Option 2**: Disable ESX certificate validation, migrate the virtual machine, and then re\-enable ESX certificate validation as follows:
 
   1. From your web browser, open the connector management console \(https://*ip\_address*/, where *ip\_address* is the IP address of the management console\) and log in using your password\.

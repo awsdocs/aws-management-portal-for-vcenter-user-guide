@@ -15,11 +15,8 @@ To enable integration between your organization and AWS, complete the following 
 ## Requirements<a name="prepare-adfs"></a>
 
 Prepare the following requirements:
-
 + Create a domain account in Active Directory\. For example, we use the name `adfssvc` in these procedures\. Keep the password in a safe place\. You'll use this account as the ADFS service account later in this procedure\.
-
 + Verify that the server to run ADFS is joined to the domain\. You can also update the computer name\.
-
 + \(Optional\) If you don't have a certificate, you can create a self\-signed certificate using Internet Information Services \(IIS\)\. It's convenient to use a self\-signed certificate in a development environment\. However, you'll need a certificate from a trusted certificate authority for a production environment\.
 
 **To create a self\-signed certificate**
@@ -135,9 +132,7 @@ Before you continue, verify that your ADFS supports the `RelayState` parameter, 
 1. \[ADFS 2\.0\] In Control Panel, go to Installed Updates and look for update KB2681584 \(Update Rollup 2\) or KB2790338 \(Update Rollup 3\)\. If you need to, download and install either [Update Rollup 2](http://support.microsoft.com/kb/2681584) or [Update Rollup 3](http://support.microsoft.com/kb/2790338)\.
 
 1. In a text editor, such as Notepad, open the following file:
-
    + \[ADFS 2\.0\] `C:\inetpub\adfs\ls\web.config`
-
    + \[ADFS 3\.0\] `%systemroot%\ADFS\Microsoft.IdentityServer.Servicehost.exe.config`
 
 1. In the `microsoft.identityServer.web` section, add `useRelyStateForIdpInitiatedSignOn` as follows, and save the change:

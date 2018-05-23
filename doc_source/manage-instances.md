@@ -4,7 +4,7 @@ You can launch an EC2 instance using the management portal\. First, create a tem
 
 ![\[Deploying an instance from a template\]](http://docs.aws.amazon.com/amp/latest/userguide/images/user_tasks.png)
 
-
+**Topics**
 + [Viewing Regions](#view-regions)
 + [Viewing an Environment](#view-environment)
 + [Managing Key Pairs](#import-key-pair)

@@ -116,15 +116,10 @@ You'll need these credentials to complete the connector setup process\.
 Save the credentials for this account in a safe location\. You'll need them to complete the connector setup process\.
 
    You can create this user using your IdP, vCenter, or Windows; whichever is easiest for you\. For more information about creating local or domain users, see the following documentation, or contact an administrator for your vCenter or your IdP:
-
    + Active Directory: [Create a New User Account](http://technet.microsoft.com/en-us/library/cc732336.aspx)
-
    + Windows: [Create a local user account](http://technet.microsoft.com/en-us/library/cc770642.aspx)
-
    + vCenter 5\.5: [Add vCenter Single Sign\-On Users](https://pubs.vmware.com/vsphere-55/index.jsp?topic=%2Fcom.vmware.vsphere.security.doc%2FGUID-72BFF98C-C530-4C50-BF31-B5779D2A4BBB.html) \(the default domain is `vsphere.local`\)
-
    + vCenter 5\.1: [Add a vCenter Single Sign On User](http://pubs.vmware.com/vsphere-51/index.jsp?topic=%2Fcom.vmware.vsphere.security.doc%2FGUID-72BFF98C-C530-4C50-BF31-B5779D2A4BBB.html) \(the default domain is `System-Domain`\)
-
    + vCenter Server Appliance: [Creating and managing local user accounts](http://virtual-drive.in/2011/12/18/creating-local-user-accounts-on-vcenter-server-appliance/)
 
 ## Setting Up the Trust Relationship<a name="set-up-trust"></a>
@@ -142,7 +137,6 @@ If you've already completed the setup process but would like to change authentic
 1. On the **AWS Management Portal for vCenter Configuration** page, select **SAML\-based authentication provider**\.
 
 1. <a name="configure-trust-saml"></a>On the **Configure the Trust Relationship** page, do one of the following:
-
    + **Option 1: Set up trust**
 
      1. In **SAML provider**, select **CREATE NEW** to create a SAML provider\. Enter a name for the provider, select the SAML metadata document for your IdP, and then click **Save**\.
@@ -164,7 +158,6 @@ If you've already completed the setup process but would like to change authentic
      1. Click **I agree that AWS Management Portal for vCenter may create the above roles on my behalf**\.
 
      1. Click **Save and Continue**\.
-
    + **Option 2: Change authentication providers**
 
      If you previously selected **AWS Connector** as the authentication provider, click **Reset Trust Relationship**\. After the reset, you can start the setup process again, select **SAML\-based authentication provider**, and then set up trust\.

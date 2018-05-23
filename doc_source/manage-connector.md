@@ -4,7 +4,7 @@ You can manage the connector using the connector management console and the conn
 
 Starting with connector version 2\.4\.0, AWS collects metrics about the performance, usage, and customization of your connector so that we can make it more stable and secure\.
 
-
+**Topics**
 + [Accessing the Management Console](#access-management-console)
 + [Logging into the Virtual Machine Console](#access-virtual-machine-console)
 + [Resetting the Connector Password](#reset-connector-pwd)

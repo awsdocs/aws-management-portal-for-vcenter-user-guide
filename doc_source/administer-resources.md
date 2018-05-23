@@ -4,7 +4,7 @@ Administrators for AWS Management Portal for vCenter are responsible for managin
 
 ![\[Deploying an instance from a template\]](http://docs.aws.amazon.com/amp/latest/userguide/images/environment.png)
 
-
+**Topics**
 + [Managing Administrators](#manage-admins)
 + [Managing VPCs and Subnets](#manage-vpcs)
 + [Managing Security Groups](#manage-sg)
@@ -200,9 +200,7 @@ Administrators can describe, start, stop, reboot, and terminate EC2 instances in
 1. Click **Dashboard** and expand the region\.
 
 1. To list your instances, do one of the following:
-
    + Expand **Default Environment**\.
-
    + Click **Default Environment** and then click the **Instances** tab\.
 
 1. To start, stop, reboot, or terminate an instance, expand **Default Environment** and select the instance\. From the **Getting Started** tab, click the desired task under **Basic Tasks**\.

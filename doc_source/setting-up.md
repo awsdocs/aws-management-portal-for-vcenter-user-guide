@@ -5,11 +5,8 @@ When you set up the management portal, you enable users in your organization to 
 To set up the management portal, complete the following tasks:
 
 **Tasks**
-
 + [Install and configure AWS Management Portal for vCenter](#install-management-portal)
-
 + [Configure time synchronization](#time-synchronization)
-
 + [\(Optional\) Configure network settings](#network-settings)
 
 **Note**  
